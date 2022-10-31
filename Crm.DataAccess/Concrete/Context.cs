@@ -6,7 +6,7 @@ namespace Crm.DataAccess.Concrete
 {
     public class Context : DbContext
     {
-        private readonly IConfiguration _configuration; 
+        private readonly IConfiguration _configuration;
         public Context(DbContextOptions<Context> options, IConfiguration configuration) : base(options)
         {
             _configuration = configuration;
@@ -26,7 +26,7 @@ namespace Crm.DataAccess.Concrete
             modelBuilder.Entity<Category>().HasData(
                 new { Id = 1, Name = "Technology", Description = "Engineering" },
                 new { Id = 2, Name = "Art", Description = "Picture" }
-                );  
+                );
         }
 
         public DbSet<Category> Categories { get; set; }

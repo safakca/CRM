@@ -18,7 +18,7 @@ namespace Crm.DataAccess.Repository
         public void Insert(T entity)
         {
             _context.Add(entity);
-            _context.SaveChanges(); 
+            _context.SaveChanges();
         }
         public void Update(T entity)
         {
@@ -33,13 +33,13 @@ namespace Crm.DataAccess.Repository
 
         public List<T> GetAll(Expression<Func<T, bool>> filter = null)
         {
-            return filter==null ? _context.Set<T>().ToList() : _context.Set<T>().Where(filter).ToList();
+            return filter == null ? _context.Set<T>().ToList() : _context.Set<T>().Where(filter).ToList();
         }
 
         public T GetByFilter(Expression<Func<T, bool>> filter)
         {
             return _context.Set<T>().SingleOrDefault(filter);
-        } 
+        }
 
     }
 }

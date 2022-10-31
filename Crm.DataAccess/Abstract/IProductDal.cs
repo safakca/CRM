@@ -4,5 +4,6 @@ namespace Crm.DataAccess.Abstract
 {
     public interface IProductDal : IRepository<Product>
     {
+        void GetProductByCategory();
     }
 }

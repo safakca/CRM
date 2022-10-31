@@ -4,4 +4,15 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="DIContainer\" />
+    <Folder Include="Logging\" />
+    <Folder Include="ValidationRules\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Crm.DataAccess\Crm.DataAccess.csproj" />
+    <ProjectReference Include="..\Crm.Entity\Crm.Entity.csproj" />
+  </ItemGroup>
+
 </Project>
